@@ -53,4 +53,4 @@ const loanInfoSchema = new mongoose.Schema({
 
 loanInfoSchema.index({ LoanRange: 1, BusinessName: 1 });
 
-export const LoanInfo = mongoose.model("loanInfo", loanInfoSchema);
+export const LoanInfo = mongoose.model("loanInfo", loanInfoSchema, "loaninfos");

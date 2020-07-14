@@ -3,14 +3,10 @@ import controllers from './loanRouter.controller'
 
 const router = Router()
 
-// /api/loan
+// /api/loan?{params}
 router
   .route('/')
-  .get(controllers.getMany)
-  .post(controllers.createOne)
-
-// /api/loan/:page
-router.route('/:page').get(controllers.getManyPagination)
+  .get(controllers.getManyPagination)
 
 // /api/loan/states
 router
@@ -28,7 +24,5 @@ router.route('/info/:state').get(controllers.getAllStateInfo)
 router
   .route('/:id')
   .get(controllers.getOne)
-  .put(controllers.updateOne)
-  .delete(controllers.removeOne)
 
 export default router

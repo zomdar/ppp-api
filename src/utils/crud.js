@@ -2,7 +2,7 @@ export const getMany = model => async (req, res) => {
   try {
     const docs = await model
       .find({})
-      .limit(100)
+      .limit()
       .select()
       .lean()
       .exec()

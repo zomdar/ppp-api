@@ -24,7 +24,7 @@ export default {
   async getManyPagination(req, res, next) {
     try {
       const perPage = parseInt(req.query.perPage) || 10
-      const page = req.params.page || 1
+      const page = req.query.page || 1
 
       const doc = await LoanInfo.find({})
         .skip(perPage * page - perPage)

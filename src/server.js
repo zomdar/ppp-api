@@ -6,6 +6,7 @@ import cors from 'cors'
 
 //routers
 import loanRouter from './loanRouter/loanRouter.router'
+import infoRouter from './loanInfo/loanInfo.router'
 import { connect } from './utils/db'
 import { signup, signin, protect } from './utils/auth'
 
@@ -23,6 +24,7 @@ app.post('/signup', signup)
 app.post('/signin', signin)
 app.use('/api', protect)
 app.use('/api/loan', loanRouter)
+app.use('/api/info', infoRouter)
 
 export const start = async () => {
   try {
