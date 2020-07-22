@@ -22,7 +22,7 @@ router.route('/info/:state').get(controllers.getAllStateInfo)
 
 // /api/loan/:id
 router
-  .route('/:id')
+  .route('/business')
   .get(controllers.getOne)
 
 export default router

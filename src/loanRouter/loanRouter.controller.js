@@ -5,7 +5,7 @@ export default {
   ...crudControllers(LoanInfo),
   async getOne(req, res) {
     try {
-      const doc = await LoanInfo.findOne({ _id: req.params.id })
+      const doc = await LoanInfo.findOne({ _id: req.query.id })
         .select()
         .lean()
         .exec()
